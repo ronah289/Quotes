@@ -1,4 +1,5 @@
-<li *ngFor='let oneQuote of listOfQuotes'>
+<li *ngFor='let oneQuote of listOfQuotes;let k=index;'>
     {{oneQuote.quote}}
-    <app-quote-detail [quoteProperties]='oneQuote'></app-quote-detail>
+    <button (click)='showInfo(k)'>Description</button>
+    <app-quote-detail *ngIf='oneQuote.showInformation' [quoteProperties]='oneQuote'></app-quote-detail>
 </li>
