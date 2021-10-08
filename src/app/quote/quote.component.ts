@@ -15,6 +15,11 @@ export class QuoteComponent implements OnInit {
   showInfo(index:any){
     this.listOfQuotes[index].showInformation = !this.listOfQuotes[index].showInformation;
   }
+  deleteMe(deleteThis:any, index:any){
+    if (deleteThis) {
+      this.listOfQuotes.splice(index,1);
+    }
+  }
   constructor() { }
 
   ngOnInit(): void {
