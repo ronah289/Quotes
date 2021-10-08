@@ -1,3 +1,4 @@
 <li *ngFor='let oneQuote of listOfQuotes'>
     {{oneQuote.quote}}
+    <app-quote-detail [quoteProperties]='oneQuote'></app-quote-detail>
 </li>
