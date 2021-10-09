@@ -13,10 +13,10 @@ export class QuoteDetailComponent implements OnInit {
   deleteMe(deleteNow:boolean){
     this.deleteThis.emit(deleteNow);
   }
-  Upvote(){
+  AddLike(){
     this.quoteProperties.upvotes++;
   }
-  Downvote(){
+  AddDislike(){
     this.quoteProperties.downvotes++;
   }
   constructor() { }
