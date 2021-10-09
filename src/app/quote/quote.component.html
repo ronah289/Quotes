@@ -1,7 +1,7 @@
 <li *ngFor="let oneQuote of listOfQuotes; let k = index">
   {{ oneQuote.quoteTitle }}
-  <button (click)="showInfo(k)">Description</button>
-  {{oneQuote.describe}} -{{oneQuote.author}}
+  <button (click)="showInfo(k)">Description</button><br>
+  {{oneQuote.describe}}
   <app-quote-detail
     *ngIf="oneQuote.showInformation"
     [quoteProperties]="oneQuote"

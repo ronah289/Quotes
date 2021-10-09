@@ -1,4 +1,4 @@
-<p>{{quoteProperties.addDate | numberOfDays}}</p>
+<p>Author: {{quoteProperties.author}}  {{quoteProperties.addDate | numberOfDays}} days old<br></p>
 <button (click)='AddLike()'>Upvote:{{quoteProperties.upvotes}}</button>
 <button (click)='AddDislike()'>Downvote:{{quoteProperties.downvotes}}</button>
 <button (click)= 'deleteMe(true)'>Delete</button>
