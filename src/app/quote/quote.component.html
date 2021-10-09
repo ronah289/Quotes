@@ -1,6 +1,7 @@
+<ol>
 <li *ngFor="let oneQuote of listOfQuotes; let k = index">
   {{ oneQuote.quoteTitle }}
-  <button (click)="showInfo(k)">Description</button><br>
+  <button (click)="showInfo(k)">Quote Details</button><br>
   {{oneQuote.describe}}
   <app-quote-detail
     *ngIf="oneQuote.showInformation"
@@ -8,3 +9,4 @@
     (deleteThis)="deleteMe($event, k)"
   ></app-quote-detail>
 </li>
+</ol>
