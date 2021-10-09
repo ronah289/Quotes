@@ -16,6 +16,9 @@ export class QuoteDetailComponent implements OnInit {
   Upvote(){
     this.quoteProperties.upvotes++;
   }
+  Downvote(){
+    this.quoteProperties.downvotes++;
+  }
   constructor() { }
 
   ngOnInit(): void {
