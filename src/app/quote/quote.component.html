@@ -1,5 +1,9 @@
-<li *ngFor='let oneQuote of listOfQuotes;let k=index;'>
-    {{oneQuote.quote}}
-    <button (click)='showInfo(k)'>Description</button>
-    <app-quote-detail *ngIf='oneQuote.showInformation' [quoteProperties]='oneQuote' (deleteThis) = 'deleteMe($event,k)' ></app-quote-detail>
+<li *ngFor="let oneQuote of listOfQuotes; let k = index">
+  {{ oneQuote.quote }}
+  <button (click)="showInfo(k)">Description</button>
+  <app-quote-detail
+    *ngIf="oneQuote.showInformation"
+    [quoteProperties]="oneQuote"
+    (deleteThis)="deleteMe($event, k)"
+  ></app-quote-detail>
 </li>
