@@ -3,7 +3,24 @@
   <hr />
   <form (ngSubmit)="submitQuote()" #quoteForm="ngForm">
     <div class="form-group">
-      <label for="name">author's name</label>
+      <label for="name">username:</label>
+      <input
+        type="text"
+        required
+        class="form-control"
+        name="user"
+        id="user"
+        [(ngModel)]="newQuote.user"
+        #user="ngModel"
+        placeholder="enter your name"
+        placeholder="doe john"
+      />
+      <div [hidden]="user.valid || user.pristine" class="alert alert-danger">
+        <p>your name is required</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name">author's name:</label>
       <input
         type="text"
         required
@@ -22,24 +39,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="name">username</label>
-      <input
-        type="text"
-        required
-        class="form-control"
-        name="user"
-        id="user"
-        [(ngModel)]="newQuote.user"
-        #user="ngModel"
-        placeholder="enter your name"
-        placeholder="doe john"
-      />
-      <div [hidden]="user.valid || user.pristine" class="alert alert-danger">
-        <p>your name is required</p>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="quotetitle">quote title</label>
+      <label for="quotetitle">quote title:</label>
       <br />
       <input
         type="text"
@@ -58,7 +58,7 @@
       </div>
     </div>
     <div class="form-group">
-      <label for="description">Description</label>
+      <label for="description">quote:</label>
       <textarea
         class="form-control"
         id="description"
@@ -76,6 +76,13 @@
         <p>author's name is required</p>
       </div>
     </div>
-    <button type="submit">submit</button>
+    <button
+      id="submit"
+      class="btn btn-sm btn-info"
+      [disabled]="!quoteForm.valid"
+      type="submit"
+    >
+      submit
+    </button>
   </form>
 </div>

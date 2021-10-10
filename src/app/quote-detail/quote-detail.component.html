@@ -1,5 +1,9 @@
-<p>Author: {{quote.author}} </p>
-<p>Added {{quote.addDate | numberOfDays}} days ago by {{quote.user}}</p>
-<button (click)='AddLike()'>Upvote:{{quote.upvotes}}</button>
-<button (click)='AddDislike()'>Downvote:{{quote.downvotes}}</button>
-<button (click)= 'deleteMe(true)'>Delete</button>
+<div class="card">
+  <p>Author: {{ quote.author }}</p>
+  <p>Added {{ quote.addDate | numberOfDays }} days ago by {{ quote.user }}</p>
+  <span class="buttons">
+    <button class="btn btn-info" (click)="AddLike()">Upvote:{{ quote.upvotes }}</button>
+    <button class="btn btn-dark" (click)="AddDislike()">Downvote:{{ quote.downvotes }}</button>
+    <button  class="btn btn-danger" (click)="deleteMe(true)">Delete</button>
+  </span>
+</div>

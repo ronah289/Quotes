@@ -1,0 +1,9 @@
+.buttons{
+    display: inline;
+}
+.buttons button{
+    margin-left: 15px;
+}
+.card{
+    font-weight: 400;
+}

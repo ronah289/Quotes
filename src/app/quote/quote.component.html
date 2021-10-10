@@ -1,21 +1,24 @@
 <div class="container">
   <div class="row">
-    <div class="col-sm-6" >
-      <h2>{{subtitle}}</h2>
+    <div class="col-sm-6">
+      <h2 class="text-center" >{{ subtitle }}</h2>
       <ol>
-        <li *ngFor="let quote of listOfQuotes; let k = index">
-          {{ quote.quoteTitle }}
-          <button (click)="showInfo(k)">Quote Details</button><br />
-          {{ quote.describe }}
-          <app-quote-detail
-            *ngIf="quote.showInformation"
-            [quote]="quote"
-            (deleteThis)="deleteMe($event, k)"
-          ></app-quote-detail>
-        </li>
+        <div class="card">
+          <li *ngFor="let quote of listOfQuotes; let k = index">
+            {{ quote.quoteTitle }}
+            <button id="showDetailButton" class="btn btn-success " (click)="showInfo(k)">Quote Details</button><br />
+            {{ quote.describe }}
+            <app-quote-detail
+              *ngIf="quote.showInformation"
+              [quote]="quote"
+              (deleteThis)="deleteMe($event, k)"
+            ></app-quote-detail>
+            <br><hr>
+          </li>
+        </div>
       </ol>
     </div>
-    <div class="col-sm-6" >
+    <div class="col-sm-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
   </div>
