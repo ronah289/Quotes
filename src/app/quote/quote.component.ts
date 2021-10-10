@@ -8,9 +8,11 @@ import {Quote} from '../quote';
 })
 export class QuoteComponent implements OnInit {
 
+  subtitle:string = 'Added Quotes';
+
   listOfQuotes:Quote[]=[
-    new Quote('eliud kipchoge','dickson onyanja','no human is limited','unlimited greatness',0,0,new Date(2021,4,2)),
-    new Quote('barrack obama','brian koech','god is able','trust in god',0,0,new Date(2016,5,4)),
+    new Quote(0,'eliud kipchoge','dickson onyanja','no human is limited','unlimited greatness',0,0,new Date(2021,4,2)),
+    new Quote(1,'barrack obama','brian koech','god is able','trust in god',0,0,new Date(2016,5,4)),
   ];
   showInfo(index:any){
     this.listOfQuotes[index].showInformation = !this.listOfQuotes[index].showInformation;
@@ -22,6 +24,12 @@ export class QuoteComponent implements OnInit {
         this.listOfQuotes.splice(index,1);
       }
     }
+  }
+  addNewQuote(newQuote:any){
+    let quoteLength = this.listOfQuotes.length;
+    newQuote.id = quoteLength+1;
+    newQuote.addDate = new Date(newQuote.adddate);
+    this.listOfQuotes.push(newQuote);
   }
   constructor() { }
 

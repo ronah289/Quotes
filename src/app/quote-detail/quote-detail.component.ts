@@ -8,16 +8,16 @@ import{Quote} from '../quote';
 })
 export class QuoteDetailComponent implements OnInit {
 
-  @Input() quoteProperties!:Quote;
+  @Input() quote!:Quote;
   @Output() deleteThis = new EventEmitter<boolean>();
   deleteMe(deleteNow:boolean){
     this.deleteThis.emit(deleteNow);
   }
   AddLike(){
-    this.quoteProperties.upvotes++;
+    this.quote.upvotes++;
   }
   AddDislike(){
-    this.quoteProperties.downvotes++;
+    this.quote.downvotes++;
   }
   constructor() { }
 

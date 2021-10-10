@@ -1,6 +1,6 @@
-<p>Author: {{quoteProperties.author}} </p>
-<p>Added by: {{quoteProperties.user}}</p>
-<p>{{quoteProperties.addDate | numberOfDays}} days old</p>
-<button (click)='AddLike()'>Upvote:{{quoteProperties.upvotes}}</button>
-<button (click)='AddDislike()'>Downvote:{{quoteProperties.downvotes}}</button>
+<p>Author: {{quote.author}} </p>
+<p>Added by: {{quote.user}}</p>
+<p>{{quote.addDate | numberOfDays}} days old</p>
+<button (click)='AddLike()'>Upvote:{{quote.upvotes}}</button>
+<button (click)='AddDislike()'>Downvote:{{quote.downvotes}}</button>
 <button (click)= 'deleteMe(true)'>Delete</button>
