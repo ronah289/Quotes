@@ -1,48 +1,81 @@
 <div class="container-fluid">
-    <h2 class="text-center">Post a quote</h2>
-    <hr>
-    <form  (ngSubmit)='submitQuote()' #quoteForm='ngForm' >
-        <div class="form-group">
-  
-            <label for="name">author's name</label>
-            <input type="text" required class="form-control" name="author" id="author" [(ngModel)]='newQuote.author' #author='ngModel' placeholder="john doe" >
-            <div [hidden]="author.valid || author.pristine" class="alert alert-danger">
-                <p>author's name is required</p>
-              </div>
-  
-        </div>
-        {{newQuote.author}}
-        <div class="form-group">
-  
-            <label for="name">username</label>
-            <input type="text" required class="form-control" name="user" id="user" [(ngModel)]='newQuote.user' #user='ngModel' placeholder="enter your name" placeholder="doe john" >
-            <div [hidden]="user.valid || user.pristine" class="alert alert-danger">
-                <p>your name is required</p>
-              </div>
-  
-        </div>
-        {{newQuote.user}}
-        <div class="form-group">
-            <label for="quotetitle" >quote title</label>
-            <br>
-            <input type="text" name="quoteTitle" id="quote-title" [(ngModel)]='newQuote.quoteTitle' #quoteTitle='ngModel' required placeholder="attitude" >
-            <div [hidden]="quoteTitle.valid || quoteTitle.pristine" class="alert alert-danger">
-                <p>quote topic is required</p>
-              </div>
-        </div>
-        {{newQuote.quoteTitle}}
-        <div class="form-group">
-  
-            <label for="description">Description</label>
-            <textarea class="form-control" id="description" rows="4" required name="describe" [(ngModel)]='newQuote.describe' 
-            #describe='ngModel' placeholder="motivation...."
-            ></textarea>
-            <div [hidden]="describe.valid || describe.pristine" class="alert alert-danger">
-                <p>author's name is required</p>
-              </div>
-  
-        </div>
-        {{newQuote.describe}}
-        <button type="submit">submit</button>
-    </form>
-  </div>
+  <h2 class="text-center">Post a quote</h2>
+  <hr />
+  <form (ngSubmit)="submitQuote()" #quoteForm="ngForm">
+    <div class="form-group">
+      <label for="name">author's name</label>
+      <input
+        type="text"
+        required
+        class="form-control"
+        name="author"
+        id="author"
+        [(ngModel)]="newQuote.author"
+        #author="ngModel"
+        placeholder="john doe"
+      />
+      <div
+        [hidden]="author.valid || author.pristine"
+        class="alert alert-danger"
+      >
+        <p>author's name is required</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="name">username</label>
+      <input
+        type="text"
+        required
+        class="form-control"
+        name="user"
+        id="user"
+        [(ngModel)]="newQuote.user"
+        #user="ngModel"
+        placeholder="enter your name"
+        placeholder="doe john"
+      />
+      <div [hidden]="user.valid || user.pristine" class="alert alert-danger">
+        <p>your name is required</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="quotetitle">quote title</label>
+      <br />
+      <input
+        type="text"
+        name="quoteTitle"
+        id="quote-title"
+        [(ngModel)]="newQuote.quoteTitle"
+        #quoteTitle="ngModel"
+        required
+        placeholder="attitude"
+      />
+      <div
+        [hidden]="quoteTitle.valid || quoteTitle.pristine"
+        class="alert alert-danger"
+      >
+        <p>quote topic is required</p>
+      </div>
+    </div>
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea
+        class="form-control"
+        id="description"
+        rows="4"
+        required
+        name="describe"
+        [(ngModel)]="newQuote.describe"
+        #describe="ngModel"
+        placeholder="motivation...."
+      ></textarea>
+      <div
+        [hidden]="describe.valid || describe.pristine"
+        class="alert alert-danger"
+      >
+        <p>author's name is required</p>
+      </div>
+    </div>
+    <button type="submit">submit</button>
+  </form>
+</div>
