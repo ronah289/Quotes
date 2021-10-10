@@ -1,6 +1,5 @@
 <p>Author: {{quote.author}} </p>
-<p>Added by: {{quote.user}}</p>
-<p>{{quote.addDate | numberOfDays}} days old</p>
+<p>Added {{quote.addDate | numberOfDays}} days ago by {{quote.user}}</p>
 <button (click)='AddLike()'>Upvote:{{quote.upvotes}}</button>
 <button (click)='AddDislike()'>Downvote:{{quote.downvotes}}</button>
 <button (click)= 'deleteMe(true)'>Delete</button>
