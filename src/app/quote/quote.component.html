@@ -5,7 +5,7 @@
       <ol>
         <div class="card">
           <li *ngFor="let quote of listOfQuotes; let k = index">
-            {{ quote.quoteTitle }}
+            <h3 appQuoteHighlighter> {{ quote.quoteTitle }}</h3>
             <button id="showDetailButton" class="btn btn-success " (click)="showInfo(k)">Quote Details</button><br />
             <hr>
             {{ quote.describe }}
