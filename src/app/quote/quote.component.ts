@@ -11,8 +11,8 @@ export class QuoteComponent implements OnInit {
   subtitle:string = 'Added Quotes';
 
   listOfQuotes:Quote[]=[
-    new Quote(0,'eliud kipchoge','dickson onyanja','no human is limited','unlimited greatness',0,0,new Date(2021,4,2)),
-    new Quote(1,'barrack obama','brian koech','god is able','trust in god',0,0,new Date(2016,5,4)),
+    new Quote(0,'Dalai lama','dickson onyanja','life','The purpose of our lives is to be happy',0,0,new Date(2021,4,2)),
+    new Quote(1,'henry ford','brian koech','success','The whole secret of a successful life is to find out what is one’s destiny to do, and then do it',0,0,new Date(2016,5,4)),
   ];
   showInfo(index:any){
     this.listOfQuotes[index].showInformation = !this.listOfQuotes[index].showInformation;
