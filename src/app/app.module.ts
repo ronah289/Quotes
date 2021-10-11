@@ -9,6 +9,7 @@ import { NumberOfDaysPipe } from './number-of-days.pipe';
 import { QuoteFormComponent } from './quote-form/quote-form.component';
 import { FormsModule } from '@angular/forms';
 import { QuoteHighlighterDirective } from './quote-highlighter.directive';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,13 @@ import { QuoteHighlighterDirective } from './quote-highlighter.directive';
     QuoteDetailComponent,
     NumberOfDaysPipe,
     QuoteFormComponent,
-    QuoteHighlighterDirective
+    QuoteHighlighterDirective,
+    FooterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
