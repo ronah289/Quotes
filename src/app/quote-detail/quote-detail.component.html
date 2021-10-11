@@ -1,6 +1,6 @@
 <div class="card">
-  <p>Author: {{ quote.author }}</p>
-  <p>Added {{ quote.addDate | numberOfDays }} days ago by {{ quote.user }}</p>
+  <p>Author: {{ quote.author | titlecase }}</p>
+  <p>Added {{ quote.addDate | numberOfDays }} days ago by {{ quote.user | titlecase }}</p>
   <span class="buttons">
     <button class="btn btn-info" (click)="AddLike()">Upvote:{{ quote.upvotes }}</button>
     <button class="btn btn-dark" (click)="AddDislike()">Downvote:{{ quote.downvotes }}</button>

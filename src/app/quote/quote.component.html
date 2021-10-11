@@ -5,7 +5,7 @@
       <ol>
         <div class="card">
           <li *ngFor="let quote of listOfQuotes; let k = index">
-            <h3 appQuoteHighlighter> {{ quote.quoteTitle }}</h3>
+            <h3 appQuoteHighlighter> {{ quote.quoteTitle | titlecase }}</h3>
             <button id="showDetailButton" class="btn btn-success " (click)="showInfo(k)">Quote Details</button><br />
             <hr>
             {{ quote.describe }}
@@ -22,5 +22,6 @@
     <div class="col-sm-6">
       <app-quote-form (addQuote)="addNewQuote($event)"></app-quote-form>
     </div>
+    <app-footer></app-footer>
   </div>
 </div>

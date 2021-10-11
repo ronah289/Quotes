@@ -6,6 +6,8 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./footer.component.css']
 })
 export class FooterComponent implements OnInit {
+  copyright:string = '2021';
+  webb:string = 'quotes-base';
 
   constructor() { }
 
